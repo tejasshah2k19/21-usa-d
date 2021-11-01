@@ -1,0 +1,150 @@
+webcontent -> all web pages and it's files like img,js,css etc 
+
+
+WEB-INF/lib -> external lib/jar 
+
+web.xml -> dd -> deployment descriptor ->
+		     configuration 
+				servlet
+				filter
+				listener
+				session
+				-------
+
+src -->  java / logic 
+----------------------------------------------------------------------
+
+facebook.com 
+		signup.html 
+		
+			firstname
+			email
+			password 
+						submit
+
+signup.html --> submit --> server --> 1) data get -> validate -> store into db --> home.html / login.html 
+															  ->  Signup.html with error 							 
+
+MVC architect
+
+
+M - model [ db ] 
+V - view  [ user => input / output -> visible ] { signup.html,home.html,login.html } 
+C - controller [ logic => data get , validation , [db call]  success/fail  ] 
+
+controller -> logic 
+dao -> db query [ insert update delete select ] 
+bean -> container -> hold 
+
+--------------------------------------------------------------------
+
+http://localhost:9659/21-usa-d/SignupServlet?firstName=tejas&email=tejas%40gmail.com&password=password123
+? => query string , key=value 
+
+form -> method -> get --> data pass as query string 
+form -> method -> post --> data -> encrypted  
+
+	
+SignupServlet => SignupController
+
+
+--------------------------------------------------------------------
+sql --> oracle, mssql, mysql,pg ,
+
+java --> mysql --> insert , update ,delete ,select 
+
+api -> jdbc [ classes ]  --> java.sql 
+
+1) open db connection 
+2) execute query 
+3) close connection 
+
+
+util --> db connection 
+
+
+driver --> vendor calsses --> 
+url  --> location 
+userName -->
+password --> 
+
+mysql-connector.jar 
+
+
+mysql -u root -p 
+
+show databases; 
+
+create database javalearn;
+
+use javalearn; 
+
+show tables; 
+
+create table users(
+	userId integer primary key auto_increment,
+	firstName varchar(20),
+	email varchar(30),
+	password varchar(20)
+);
+
+select * from users; 
+
+to run query using java  we have 
+
+1)Statement
+2)PreparedStatement
+3)CallableStatement 
+
+
+insert into users (firstName,email,password) values (?,?,?) 
+
+
+
+----------------------------------------------
+CRUD 
+--servletConfig
+--Filter 
+--Listener
+--Session
+--Cookie 
+--Jsp 
+--ReusalbeWebComponent 
+--EL { expression language } 
+--JSTL 
+--custom tag 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+	
+				
+				
