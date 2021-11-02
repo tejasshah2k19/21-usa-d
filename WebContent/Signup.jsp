@@ -17,6 +17,9 @@
 			value="Signup" />
 
 	</form>
+	
+	<br><br>
+	<a href="ListAllUsersServlet">List All Users</a>
 
 
 </body>
