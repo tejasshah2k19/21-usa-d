@@ -18,6 +18,7 @@
 			<th>FirstName</th>
 			<th>Email</th>
 			<th>Password</th>
+			<th>Action</th>
 		</tr>
 
 		<%
@@ -28,11 +29,15 @@
 			<td><%=rs.getString("firstName")%></td>
 			<td><%=rs.getString("email")%></td>
 			<td><%=rs.getString("password")%></td>
+			<td>   <a href="DeleteUserServlet?userId=<%=rs.getInt("userId")%>"> Delete </a> | Edit </td>
 		</tr>
 		<%
 			}
 		%>
 	</table>
+	
+	
+	
 
 
 </body>
