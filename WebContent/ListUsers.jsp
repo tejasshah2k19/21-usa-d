@@ -29,15 +29,18 @@
 			<td><%=rs.getString("firstName")%></td>
 			<td><%=rs.getString("email")%></td>
 			<td><%=rs.getString("password")%></td>
-			<td>   <a href="DeleteUserServlet?userId=<%=rs.getInt("userId")%>"> Delete </a> | Edit </td>
+			<td><a href="DeleteUserServlet?userId=<%=rs.getInt("userId")%>">
+					Delete </a> | <a
+				href="EditUserServlet?userId=<%=rs.getInt("userId")%>"> Edit
+			</a></td>
 		</tr>
 		<%
 			}
 		%>
 	</table>
-	
-	
-	
+
+
+
 
 
 </body>
