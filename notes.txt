@@ -115,12 +115,26 @@ CRUD
 --custom tag 
 
 
+----------------------------------------------
+filter :- 
 
+	pre process request 
+	
+	whatsapp --> image 25 mb --> mr x 
 
+	Mr A ---> 25 mb upload -> server ---> 25 mb -->  Mr X 
+	Mr A ---> 25 MB upload ---> compression --> 5 mb --> upload --> server --> 5 mb --> Mr X
+	 
+    e-commerce 
+    		addToCart 
+    		place order / check out --> loggedIn ? 
+    		  
+1) class implements Filter  
+2) init doFilter destroy 
+3) mapping -> web.xml | annotation @WebFilter 
 
-
-
-
+FilterCalc.jsp --> no1 no2 | submit --->   {filter} validation |  FilterCalcServlet 
+----------------------------------------------
 
 
 
