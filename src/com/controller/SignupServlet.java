@@ -1,9 +1,6 @@
 package com.controller;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
-import com.util.DbConnection;
+import com.bean.UserBean;
+import com.dao.UserDao;
 
 public class SignupServlet extends HttpServlet {
 
@@ -23,6 +20,11 @@ public class SignupServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 
+		UserBean userBean = new UserBean();
+		userBean.setFirstName(firstName);
+		userBean.setEmail(email);
+		userBean.setPassword(password);
+
 		// validation
 
 		// db store
@@ -32,33 +34,14 @@ public class SignupServlet extends HttpServlet {
 
 		// open connection -- insert
 
-		try {
+		UserDao userDao = new UserDao();
+		int status = userDao.insertUser(userBean);
 
-			Connection con = DbConnection.getConnection();
-
-			PreparedStatement pstmt = con
-					.prepareStatement("insert into users (firstName,email,password) values (?,?,?)");
-
-			pstmt.setString(1, firstName);
-			pstmt.setString(2, email);
-			pstmt.setString(3, password);
-
-			// run query
-
-			// executeUpdate() -> insert update delete
-			// executeQuery() -> select
-
-			int i = pstmt.executeUpdate();// query -> db -> run
-			if (i == 0) {
-				System.out.println("record not inserted....");
-			} else {
-				System.out.println("record inserted....");
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
+		if (status == 0) {
+			request.setAttribute("error", "Something went wrong Please try again");
+		} else {
+			request.setAttribute("msg", "User added");
 		}
-
 		RequestDispatcher rd = request.getRequestDispatcher("Signup.jsp");
 		rd.forward(request, response);
 

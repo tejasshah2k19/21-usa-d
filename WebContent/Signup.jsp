@@ -7,8 +7,9 @@
 <title>Signup</title>
 </head>
 <body>
- 
 
+
+	${msg } ${error}
 	<form action="SignupServlet" method="post">
 
 		FirstName: <input type="text" name="firstName" /><br> Email:<input
@@ -17,8 +18,9 @@
 			value="Signup" />
 
 	</form>
-	
-	<br><br>
+
+	<br>
+	<br>
 	<a href="ListAllUsersServlet">List All Users</a>
 
 
