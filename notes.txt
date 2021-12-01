@@ -136,6 +136,44 @@ filter :-
 FilterCalc.jsp --> no1 no2 | submit --->   {filter} validation |  FilterCalcServlet 
 ----------------------------------------------
 
+facebook -> login 
+
+		A 
+		B
+		C	 
+
+		A friend request send B 
+		
+credentials ---> session 	
+user track -->
+
+
+Login --- Logout 
+
+user information :-
+		session -- is an object created by server inside server's memory 
+		cookie 
+		
+		
+society -> car park | two wheeler park ???? 
+board? 
+wathcMan?? symbol stickers 
+		
+		
+		A -> facebook ---server --> session [ id 21 ] ->  A [cookie  21]  
+		B -> faceboo---server --> session   [ id 22 ] ->  B [cookie  22]
+		C  -> faceboo---server --> session  [ id 23 ] ->  C [cookie  23]
+		C -> friend request -->23 --> server 23???  		
+--------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
