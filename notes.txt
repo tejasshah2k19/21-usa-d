@@ -152,28 +152,50 @@ Login --- Logout
 
 user information :-
 		session -- is an object created by server inside server's memory 
-		cookie 
+		cookie  -- browser -- client side--- 
 		
 		
 society -> car park | two wheeler park ???? 
 board? 
-wathcMan?? symbol stickers 
+watchMan?? symbol stickers 
 		
 		
 		A -> facebook ---server --> session [ id 21 ] ->  A [cookie  21]  
-		B -> faceboo---server --> session   [ id 22 ] ->  B [cookie  22]
+		B -> facebook---server --> session   [ id 22 ] ->  B [cookie  22]
 		C  -> faceboo---server --> session  [ id 23 ] ->  C [cookie  23]
 		C -> friend request -->23 --> server 23???  		
 --------------------------------------
 
+cookie --> client side -- browser 
+
+how cookie will transfer from client to server ?
+	when client request to server -- in hidden all the coookies are sent 
+								  -- browser info , os , lang , 
+								  -- requestHeaders 
+				
 
 
 
+--------------------------------------
+server start --> api connection -> logs  
+server stop --> api connection -> logs 
+
+session--> create++ destroy-- 
+counter=4
+
+request.setAttribute()
+
+1) class - Listener [ interface ]  
+2) logic - override 
+3) web.xml 
 
 
 
+--------------------------------------
 
 
+
+--------------------------------------
 
 
 

@@ -29,5 +29,8 @@
 		<session-timeout>3</session-timeout>
 	</session-config>
 
+	<listener>
+		<listener-class>com.listener.UserCountListener</listener-class>
+	</listener>
 
 </web-app>
