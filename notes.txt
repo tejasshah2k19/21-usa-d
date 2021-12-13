@@ -193,11 +193,29 @@ request.setAttribute()
 
 --------------------------------------
 
+jstl :- 
+<b> <i> <img> 
+java --> jstl 
+developer --> customtag 
+
+jstl -> core , sql , format , xml , ...
+
+1) jstl-1.2.jar [ download] 
+2) jsp - import
+3) jps-use
 
 
+	core->
+			forEach
+			set 
+			out 
+			if 
+			catch 
+			case 
+
+ 
 --------------------------------------
-
-
+ 
 
 
 
