@@ -266,10 +266,23 @@ Footer.jsp // 5 line copy
 
 7 lines 
 ---------------------------------------------------------------
- 
+custom tags  --- lib --> tomcat -- lib --> jsp-api.jar 
 
 
+1) simple tag 
+2) classic tag 
 
+
+simple tag :-	
+
+1) Tag handler class - logic //logic class --implementation class 
+2) tag lib descriptor - .tld  // lib - doc -- contains all the info of tag 
+3) web.xml -- .tld  // server will recognize --read 
+4) import tld and use in jsp  
+
+
+<greet></greet>
+---------------------------------------------------------------
 
 
 

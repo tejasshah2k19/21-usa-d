@@ -17,8 +17,8 @@
 		<servlet-name>SignupServlet</servlet-name>
 		<servlet-class>com.controller.SignupServlet</servlet-class>
 	</servlet>
-	
-	
+
+
 	<servlet-mapping>
 		<servlet-name>SignupServlet</servlet-name>
 		<url-pattern>/SignupServlet</url-pattern>
@@ -33,4 +33,14 @@
 		<listener-class>com.listener.UserCountListener</listener-class>
 	</listener>
 
+	<jsp-config>
+		<taglib>
+			<taglib-uri>www.javalearn.com/empl/tejas</taglib-uri>
+			<taglib-location>WEB-INF/stag.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
 </web-app>
+
+
+

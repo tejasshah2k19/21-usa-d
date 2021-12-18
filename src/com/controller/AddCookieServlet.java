@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/AddCookieServlet")
 public class AddCookieServlet extends HttpServlet {
-
+//implements Servlet == interface 
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
